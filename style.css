@@ -1,0 +1,182 @@
+/* ************************************************************************************** */
+/*                                                                                        */																					  
+/* Project: Smartphone                                  / $$      /$$ /$$$$$$$$ /$$$$$$   */
+/*                  			                        | $$  /$ | $$| $$_____//$$__  $$  */
+/* style.css                                     	    | $$ /$$$| $$| $$     |__/  \ $$  */
+/*                                                  	| $$/$$ $$ $$| $$$$$     /$$$$$/  */
+/* By: vcastell <valeriocastellipro@gmail.com>	        | $$$$_  $$$$| $$__/    |___  $$  */
+/*                                              		| $$$/ \  $$$| $$      /$$  \ $$  */
+/* Created: 2022/01/13 14:09:01 vcastell     	        | $$/   \  $$| $$     |  $$$$$$/  */
+/* Updated: 2022/01/13 14:09:01 vcastell                |__/     \__/|__/      \______/   */
+/*                                                                    				      */
+/******************************************************************************************/
+
+/* IMPORTATIONS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+	
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-blue: #0E143C;
+	--color-blueLight: #179de9;
+	--color-blueDark: #00507c;
+	--color-pinkLight : #F1C6D7;
+
+	--DarkOpacity30: rgba(0, 0, 0, 0.3);
+	--GrayOpacity50: rgba(233, 233, 233, 0.5);
+	--RedOpacity50: rgba(255, 0, 0, 0.5);
+
+}
+
+body{
+	font-size: 1.6rem;
+	color: var(--color-white);
+	background: linear-gradient(-45deg,var(--color-pinkLight),var(--color-blue));
+	margin: 0;
+	height: 100vh;
+}
+
+ul, ul li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+/* ### HEADER ### */
+
+header{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--GrayOpacity50);
+	padding: 10px 0;
+}
+
+.nav-left,
+.nav-right,
+.nav-left ul
+.nav-right ul,
+footer ul{
+	display: flex;
+	align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav img{
+	width: 90px;
+}
+
+.nav-bar-menu ul{
+	display: flex;
+	gap: 20px;
+}
+
+#sign-in{
+	align-self: center;
+	border-radius: 20px;
+	border: 1px solid var(--color-white);
+	padding: 10px 20px;
+}
+
+/* ### MAIN ###  */
+
+.container{
+	width: 70%;
+	margin: auto;
+}
+
+main{
+	display: flex;
+	justify-content: space-between;
+	padding: 130px 0;
+}
+
+.desc{
+	width: 40%;
+	padding-right: 30px;
+	margin: auto;
+}
+
+.desc h1{
+	font-size: 4rem;
+	margin: 0;
+}
+
+.desc p{
+	padding: 0 80px 20px 0;
+}
+
+#button-blue{
+	background: transparent linear-gradient(180deg, var(--color-blueLight), var(--color-blueDark));
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 0;
+	text-shadow: 1px 1px 0 var(--DarkOpacity30);
+	box-shadow: 2px 2px 20px var(--DarkOpacity30);
+}
+
+#button-borderwhite{
+	border: 1px solid var(--color-white);
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 10px;
+}
+
+/* PARTIE DROITE : LES PHOTOS  */
+
+.pictures{
+	position: relative;
+	text-align: center;
+	padding: 30px 0;
+	width: 60%;
+}
+
+.pictures img{
+	width: 30%;
+}
+
+#img1{
+	box-shadow: 35px 35px 35px #bb7993;
+	margin-right: 200px;
+	border-bottom-left-radius: 33px;
+	border-bottom-right-radius: 33px;
+}
+
+#img2{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	width: 35%;
+	z-index: 10;
+	box-shadow: 0px 35px 35px var(--GrayOpacity50);
+	border-bottom-left-radius: 33px;
+	border-bottom-right-radius: 33px;
+}
+
+#img3{
+	box-shadow: 35px 35px 35px #bb7993;
+	border-top-left-radius: 33px;
+	border-bottom-right-radius: 33px;
+}
+
+/* ### FOOTER ### */
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-top: 1px solid var(--GrayOpacity50);
+}
+
+footer img{
+	padding-top: 10px;
+	width: 15%;
+	filter:invert(25%);
+}
